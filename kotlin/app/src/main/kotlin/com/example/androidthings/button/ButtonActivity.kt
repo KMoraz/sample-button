@@ -45,6 +45,10 @@ class ButtonActivity : Activity() {
     private lateinit var buttonInputDriver: ButtonInputDriver
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        
+        AppCenter.start(getApplication(), "aba60c35-fe01-4f98-84cd-a1668abccb42",
+                  Analytics.class, Crashes.class);
+        
         super.onCreate(savedInstanceState)
         Log.i(TAG, "Starting ButtonActivity")
 
